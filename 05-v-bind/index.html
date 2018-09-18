@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class 05</title>
+    <style>
+    .red{
+        color: red    
+    }
+    .green{
+        color:green
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1 v-show="showTitle">{{ title }}</h1>
+        <img v-bind:src="image" :title="title">
+
+        <p :class="pclass">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+
+        <select v-model="pclass">
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+        </select>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            title : "Class 05 - With Vue JS",
+            showTitle : false,
+            image: "https://vuejs.org/images/logo.png",
+            title: "Vue.JS",
+            pclass: "green"
+        }
+    });
+    </script>
+    
+</body>
+</html>

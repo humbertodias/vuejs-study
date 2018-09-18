@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class 04</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-show="showTitle">{{ title }}</h1>
+
+        <label for="">Name</label>
+        <input type="text" v-model="name">
+
+        <br><br>
+        <label for="">Phone</label>
+        <input type="text" v-model="phone">
+
+        <br><br>
+        <label for="">News</label>
+        <input type="radio" v-model="news" value="yes">Yes
+        <input type="radio" v-model="news" value="no">No
+
+        <br><br>
+        <label for="">Interesting</label>
+        <input type="checkbox" v-model="intersting" value="soccer">Soccer
+        <input type="checkbox" v-model="intersting" value="f1">F1
+        <input type="checkbox" v-model="intersting" value="racing">Racing
+
+
+        <br><br>
+        <label for="">How do you meet us?</label>
+        <select v-model="meet">
+            <option value="">Choose</option>
+            <option value="google">Google</option>
+            <option value="tv">TV</option>
+            <option value="magazine">Magazine</option>
+        </select>
+
+
+        <br><br>
+        <button>Send</button>
+
+        <hr>
+        {{name}} <br>
+        {{phone}} <br>
+        {{news}} <br>
+        {{intersting}} <br>
+        {{meet}} <br>
+
+
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            title : "Class 04 - With Vue JS",
+            showTitle : false,
+            name : "",
+            phone: "",
+            news: "",
+            intersting:[],
+            meet:""
+        }
+    });
+    </script>
+    
+</body>
+</html>
